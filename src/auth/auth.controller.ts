@@ -10,7 +10,6 @@ export class AuthController {
 
     @Post("/signin")
     signin(
-        @Req() req: Request,
         @Body() body: BodySignin,
         @Res() res: Response
     ) {
@@ -20,7 +19,6 @@ export class AuthController {
     @ApiBody({ type: BodySignup })
     @Post("/signup")
     signup(
-        @Req() req: Request,
         @Body() body: BodySignup,
         @Res() res: Response
     ) {

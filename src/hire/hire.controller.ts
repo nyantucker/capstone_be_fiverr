@@ -1,4 +1,4 @@
-import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete, Param } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { HireService } from './hire.service';
 import { ApiTags } from '@nestjs/swagger';
@@ -23,7 +23,7 @@ export class HireController {
 
     @Post("/hoan-thanh-cong-viec/:MaThueCongViec")
     completeJob(
-        @Query("MaThueCongViec") MaThueCongViec: number,
+        @Param("MaThueCongViec") MaThueCongViec: number,
         @Headers("Token") token: string,
         @Res() res: Response
     ) {
@@ -58,7 +58,7 @@ export class HireController {
 
     @Get("/:id")
     getHiresById(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -67,7 +67,7 @@ export class HireController {
 
     @Put("/:id")
     editHires(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
         @Body() body: HireDto
@@ -77,7 +77,7 @@ export class HireController {
 
     @Delete("/:id")
     deleteHires(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response
     ) {

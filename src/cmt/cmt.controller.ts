@@ -1,4 +1,4 @@
-import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete, Param } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { CmtService } from './cmt.service';
 import { ApiTags } from '@nestjs/swagger';
@@ -32,7 +32,7 @@ export class CmtController {
 
     @Put("/:id")
     editCmt(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
         @Body() body: CmtDto
@@ -42,7 +42,7 @@ export class CmtController {
 
     @Delete("/:id")
     deleteCmt(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response
     ) {
@@ -51,7 +51,7 @@ export class CmtController {
 
     @Get("/lay-binh-luan-theo-cong-viec/:MaCongViec")
     getCmtByJob(
-        @Query("MaCongViec") MaCongViec: number,
+        @Param("MaCongViec") MaCongViec: number,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {

@@ -1,4 +1,4 @@
-import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete, UploadedFiles, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete, UploadedFiles, UseInterceptors, Param } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { ApiTags, ApiBody, ApiConsumes } from '@nestjs/swagger';
 import { JobsService } from './jobs.service';
@@ -26,7 +26,7 @@ export class JobsController {
 
     @Get("/lay-chi-tiet-loai-cong-viec/:MaLoaiCongViec")
     getJobsByType(
-        @Query("MaLoaiCongViec") MaLoaiCongViec: number,
+        @Param("MaLoaiCongViec") MaLoaiCongViec: number,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -35,7 +35,7 @@ export class JobsController {
 
     @Get("/lay-cong-viec-theo-chi-tiet-loai/:MaChiTietLoai")
     getJobsByDetail(
-        @Query("MaChiTietLoai") MaChiTietLoai: number,
+        @Param("MaChiTietLoai") MaChiTietLoai: number,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -44,7 +44,7 @@ export class JobsController {
 
     @Get("/lay-cong-viec-chi-tiet/:MaCongViec")
     getFullDetailsJobs(
-        @Query("MaCongViec") MaCongViec: number,
+        @Param("MaCongViec") MaCongViec: number,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -53,7 +53,7 @@ export class JobsController {
 
     @Get("/lay-danh-sach-cong-viec-theo-ten/:TenCongViec")
     getJobsByName(
-        @Query("TenCongViec") TenCongViec: string,
+        @Param("TenCongViec") TenCongViec: string,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -88,7 +88,7 @@ export class JobsController {
 
     @Get("/:id")
     getJobsById(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -97,7 +97,7 @@ export class JobsController {
 
     @Put("/:id")
     editJobs(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
         @Body() body: JobDto
@@ -107,7 +107,7 @@ export class JobsController {
 
     @Delete("/:id")
     deleteJobs(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response
     ) {
@@ -118,20 +118,20 @@ export class JobsController {
     @ApiBody({
         type: UploadJobImgDto
     })
-    @UseInterceptors(FilesInterceptor("avatar", 10, {
+    @UseInterceptors(FilesInterceptor("hinh_anh", 10, {
         storage: diskStorage({
             destination: process.cwd() + "/public/imgs",
             filename: (req, file, callback) => callback(null, new Date().getTime() + "_" + file.originalname)
         })
     }))
-    @Post("/upload-upload-hinh-cong-viec/:MaCongViec")
+    @Post("/upload-hinh-cong-viec/:MaCongViec")
     uploadJobsImg(
-        @Query("MaCongViec") MaCongViec: number,
+        @Param("MaCongViec") MaCongViec: number,
         @UploadedFiles() file: Express.Multer.File[],
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
-        let [name] = file.map(file => file.originalname)
+        let [name] = file.map(file => file.filename)
         return this.jobsService.uploadJobsImg(token, res, name, MaCongViec)
     }
 

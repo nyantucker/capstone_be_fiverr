@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Headers, Post, Put, Query, Req, Res, UploadedFiles, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Headers, Param, Post, Put, Query, Req, Res, UploadedFiles, UseInterceptors } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { ApiBody, ApiConsumes, ApiTags } from '@nestjs/swagger';
 import { ConfigService } from '@nestjs/config';
@@ -53,7 +53,7 @@ export class UsersController {
 
     @Get("/:id")
     getUsersById(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -62,7 +62,7 @@ export class UsersController {
 
     @Put("/:id")
     editUsers(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
         @Body() body: UserDto
@@ -72,7 +72,7 @@ export class UsersController {
 
     @Get("/search/:TenNguoiDung")
     searchUsers(
-        @Query("TenNguoiDung") TenNguoiDung: string,
+        @Param("TenNguoiDung") TenNguoiDung: string,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -95,7 +95,7 @@ export class UsersController {
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
-        let [name] = file.map(file => file.originalname)
+        let [name] = file.map(file => file.filename)
         return this.userService.uploadAvatar(token, res, name)
     }
 }

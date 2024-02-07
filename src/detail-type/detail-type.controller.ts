@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Headers, Post, Res, Query, Put, Delete } from '@nestjs/common';
+import { Body, Controller, Get, Headers, Post, Res, Query, Put, Delete, Param } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { ApiTags } from '@nestjs/swagger';
 import { DetailTypeService } from './detail-type.service';
@@ -41,7 +41,7 @@ export class DetailTypeController {
 
     @Get("/:id")
     getDetailsById(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -50,7 +50,7 @@ export class DetailTypeController {
 
     @Put("/:id")
     editDetails(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
         @Body() body: JobDetailDto
@@ -60,7 +60,7 @@ export class DetailTypeController {
 
     @Delete("/:id")
     deleteDetails(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response
     ) {

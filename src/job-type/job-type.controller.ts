@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Headers, Post, Res, Query, Put, Delete } from '@nestjs/common';
+import { Body, Controller, Get, Headers, Post, Res, Query, Put, Delete, Param } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JobTypeService } from './job-type.service';
 import { ApiTags } from '@nestjs/swagger';
@@ -40,7 +40,7 @@ export class JobTypeController {
 
     @Get("/:id")
     getTypesById(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
     ) {
@@ -49,7 +49,7 @@ export class JobTypeController {
 
     @Put("/:id")
     editTypes(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response,
         @Body() body: JobTypeDto
@@ -59,7 +59,7 @@ export class JobTypeController {
 
     @Delete("/:id")
     deleteTypes(
-        @Query("id") id: number,
+        @Param("id") id: number,
         @Headers("Token") token: string,
         @Res() res: Response
     ) {

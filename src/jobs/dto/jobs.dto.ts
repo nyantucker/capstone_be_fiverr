@@ -40,5 +40,5 @@ export class JodPageDto {
 
 export class UploadJobImgDto {
     @ApiProperty({ type: 'string', format: "binary" })
-    avatar: any;
+    hinh_anh: any;
 }

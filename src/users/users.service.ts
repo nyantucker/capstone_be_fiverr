@@ -63,7 +63,14 @@ export class UsersService {
             }
         })
         if (checkUser.role == "ADMIN") {
+            await this.prisma.nguoiDung.delete({
+                where: {
+                    user_id: id * 1
+                }
+            })
             return responseData(res, "Xóa người dùng thành công", "", 200)
+        } else {
+            responseData(res, "Không có quyền truy cập", "", 403)
         }
     }
 

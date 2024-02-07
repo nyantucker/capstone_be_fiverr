@@ -1,0 +1,1838 @@
+{
+	"info": {
+		"_postman_id": "90da85f5-f101-4f94-b96d-70018c14197e",
+		"name": "capstone be fiverr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31417221"
+	},
+	"item": [
+		{
+			"name": "Đăng ký",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"email\": \"stringAAA\",\r\n  \"pass_word\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"birth_day\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"skill\": \"string\",\r\n  \"certification\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đăng nhập",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@admin\",\r\n  \"pass_word\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NguoiDung - Lấy ds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NguoiDung - Thêm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string AAA\",\r\n  \"email\": \"stringBBBBBB\",\r\n  \"pass_word\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"birth_day\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"skill\": \"string\",\r\n  \"certification\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NguoiDung - Xóa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string AAA\",\r\n  \"email\": \"stringBBBBBB\",\r\n  \"pass_word\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"birth_day\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"skill\": \"string\",\r\n  \"certification\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users?id=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NguoiDung - Trang tìm kiếm",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string AAA\",\r\n  \"email\": \"stringBBBBBB\",\r\n  \"pass_word\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"birth_day\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"skill\": \"string\",\r\n  \"certification\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/phan-trang-tim-kiem/?pageIndex=1&pageSize=3&keyword=am",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"phan-trang-tim-kiem",
+						""
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "3"
+						},
+						{
+							"key": "keyword",
+							"value": "am"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NguoiDung - tìm theo id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"2"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NguoiDung - sửa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string AAA\",\r\n  \"email\": \"stringBBBBBB\",\r\n  \"pass_word\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"birth_day\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"skill\": \"stringA\",\r\n  \"certification\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"12"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NguoiDung - tìm theo tên",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string AAA\",\r\n  \"email\": \"stringBBBBBB\",\r\n  \"pass_word\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"birth_day\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"skill\": \"stringA\",\r\n  \"certification\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/search/am",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"search",
+						"am"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NguoiDung - upload avatar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/AD/Downloads/delicate-white-lotus-flower.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/upload-avatar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"upload-avatar"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoaiCongViec - lấy ds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/loai-cong-viec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loai-cong-viec"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoaiCongViec - thêm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_loai_cong_viec\": 0,\r\n  \"ten_loai_cong_viec\": \"Làm toán\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/loai-cong-viec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loai-cong-viec"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoaiCongViec - trang tìm kiếm",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_loai_cong_viec\": 0,\r\n  \"ten_loai_cong_viec\": \"Làm toán\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/loai-cong-viec/phan-trang-tim-kiem?pageIndex=1&pageSize=3&keyword=a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loai-cong-viec",
+						"phan-trang-tim-kiem"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "3"
+						},
+						{
+							"key": "keyword",
+							"value": "a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoaiCongViec - tìm theo id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_loai_cong_viec\": 0,\r\n  \"ten_loai_cong_viec\": \"Làm toán\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/loai-cong-viec/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loai-cong-viec",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoaiCongViec - sửa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_loai_cong_viec\": 0,\r\n  \"ten_loai_cong_viec\": \"Tính\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/loai-cong-viec/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loai-cong-viec",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoaiCongViec - xóa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/loai-cong-viec/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loai-cong-viec",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChieTietLoaiCongViec - lấy ds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/chi-tiet-loai-cong-viec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chi-tiet-loai-cong-viec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChieTietLoaiCongViec - thêm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_chi_tiet\": \"Toán cộng\",\r\n  \"ma_loai_cong_viec\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/chi-tiet-loai-cong-viec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chi-tiet-loai-cong-viec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChieTietLoaiCongViec - Trang tìm kiếm",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_chi_tiet\": \"Toán cộng\",\r\n  \"ma_loai_cong_viec\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/chi-tiet-loai-cong-viec/phan-trang-tim-kiem?pageIndex=2&pageSize=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chi-tiet-loai-cong-viec",
+						"phan-trang-tim-kiem"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "2"
+						},
+						{
+							"key": "pageSize",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChieTietLoaiCongViec - Tìm theo id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_chi_tiet\": \"Toán cộng\",\r\n  \"ma_loai_cong_viec\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/chi-tiet-loai-cong-viec/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chi-tiet-loai-cong-viec",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChieTietLoaiCongViec - sửa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_chi_tiet\": \"Toán cộng + trừ\",\r\n  \"ma_loai_cong_viec\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/chi-tiet-loai-cong-viec/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chi-tiet-loai-cong-viec",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChieTietLoaiCongViec - xóa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/chi-tiet-loai-cong-viec/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chi-tiet-loai-cong-viec",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - lấy ds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_cong_viec\": \"95ĐXX\",\r\n  \"danh_gia\": 3,\r\n  \"gia_tien\": 4000,\r\n  \"hinh_anh\": \"string\",\r\n  \"mo_ta\": \"string\",\r\n  \"mo_ta_ngan\": \"string\",\r\n  \"sao_cong_viec\": 2,\r\n  \"ma_chi_tiet_loai\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - thêm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_cong_viec\": \"AAA 95ĐXX0DF\",\r\n  \"danh_gia\": 3,\r\n  \"gia_tien\": 4000,\r\n  \"hinh_anh\": \"string\",\r\n  \"mo_ta\": \"string\",\r\n  \"mo_ta_ngan\": \"string\",\r\n  \"sao_cong_viec\": 2,\r\n  \"ma_chi_tiet_loai\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - Trang tìm kiếm",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_cong_viec\": \"AAA 95ĐXX0DF\",\r\n  \"danh_gia\": 3,\r\n  \"gia_tien\": 4000,\r\n  \"hinh_anh\": \"string\",\r\n  \"mo_ta\": \"string\",\r\n  \"mo_ta_ngan\": \"string\",\r\n  \"sao_cong_viec\": 2,\r\n  \"ma_chi_tiet_loai\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/phan-trang-tim-kiem?pageIndex=1&pageSize=3&keyword=a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"phan-trang-tim-kiem"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "3"
+						},
+						{
+							"key": "keyword",
+							"value": "a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - tìm theo id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_cong_viec\": \"AAA 95ĐXX0DF\",\r\n  \"danh_gia\": 3,\r\n  \"gia_tien\": 4000,\r\n  \"hinh_anh\": \"string\",\r\n  \"mo_ta\": \"string\",\r\n  \"mo_ta_ngan\": \"string\",\r\n  \"sao_cong_viec\": 2,\r\n  \"ma_chi_tiet_loai\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - sửa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_cong_viec\": \"AAA 95ĐXX0DF\",\r\n  \"danh_gia\": 3,\r\n  \"gia_tien\": 90000,\r\n  \"hinh_anh\": \"string\",\r\n  \"mo_ta\": \"string\",\r\n  \"mo_ta_ngan\": \"string\",\r\n  \"sao_cong_viec\": 2,\r\n  \"ma_chi_tiet_loai\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - xóa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - upload hình",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/AD/Downloads/lay.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/upload-hinh-cong-viec/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"upload-hinh-cong-viec",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - lấy menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/AD/Downloads/lay.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/lay-menu-loai-cong-viec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"lay-menu-loai-cong-viec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - lấy chi tiết loại công việc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/AD/Downloads/lay.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/lay-chi-tiet-loai-cong-viec/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"lay-chi-tiet-loai-cong-viec",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - lấy công việc theo chi tiết loại",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/AD/Downloads/lay.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/lay-cong-viec-theo-chi-tiet-loai/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"lay-cong-viec-theo-chi-tiet-loai",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - lấy công việc chi tiết",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/AD/Downloads/lay.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/lay-danh-sach-cong-viec-theo-ten/a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"lay-danh-sach-cong-viec-theo-ten",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CongViec - lấy công việc theo tên",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/AD/Downloads/lay.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/cong-viec/lay-danh-sach-cong-viec-theo-ten/ass",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cong-viec",
+						"lay-danh-sach-cong-viec-theo-ten",
+						"ass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BinhLuan - lấy ds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/AD/Downloads/lay.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/binh-luan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"binh-luan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BinhLuan - thêm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 4,\r\n  \"noi_dung\": \"tỆ\",\r\n  \"sao_binh_luan\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/binh-luan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"binh-luan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BinhLuan - sửa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 4,\r\n  \"noi_dung\": \"tỆ rất\",\r\n  \"sao_binh_luan\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/binh-luan/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"binh-luan",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BinhLuan - xóa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 4,\r\n  \"noi_dung\": \"tỆ rất\",\r\n  \"sao_binh_luan\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/binh-luan/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"binh-luan",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BinhLuan - lấy cmt theo cv",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 4,\r\n  \"noi_dung\": \"tỆ rất\",\r\n  \"sao_binh_luan\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/binh-luan/lay-binh-luan-theo-cong-viec/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"binh-luan",
+						"lay-binh-luan-theo-cong-viec",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ThueCongViec - lấy ds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 4,\r\n  \"noi_dung\": \"tỆ rất\",\r\n  \"sao_binh_luan\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/thue-cong-viec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"thue-cong-viec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ThueCongViec - thuê",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 8,\r\n  \"user_id\": 4,\r\n  \"hoan_thanh\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/thue-cong-viec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"thue-cong-viec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ThueCongViec - Trang tìm kiếm",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 8,\r\n  \"user_id\": 4,\r\n  \"hoan_thanh\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/thue-cong-viec/phan-trang-tim-kiem?pageIndex=1&pageSize=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"thue-cong-viec",
+						"phan-trang-tim-kiem"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ThueCongViec - tìm theo id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 8,\r\n  \"user_id\": 4,\r\n  \"hoan_thanh\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/thue-cong-viec/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"thue-cong-viec",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ThueCongViec - sửa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 8,\r\n  \"user_id\": 4,\r\n  \"hoan_thanh\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/thue-cong-viec/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"thue-cong-viec",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ThueCongViec - xóa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 8,\r\n  \"user_id\": 4,\r\n  \"hoan_thanh\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/thue-cong-viec/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"thue-cong-viec",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ThueCongViec - lấy danh sách đã thuê",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 8,\r\n  \"user_id\": 4,\r\n  \"hoan_thanh\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/thue-cong-viec/lay-danh-sach-da-thue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"thue-cong-viec",
+						"lay-danh-sach-da-thue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ThueCongViec - hoàn thành công việc",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjUsImtleSI6MTcwNzMyMTIyNTkzMH0sImlhdCI6MTcwNzMyMTIyNSwiZXhwIjoxNzA3OTI2MDI1fQ.IOtnuCQeaTLYmb2mzYghrxfBB3M7TIvy3jx3RtYSlFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ma_cong_viec\": 8,\r\n  \"user_id\": 4,\r\n  \"hoan_thanh\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/thue-cong-viec/hoan-thanh-cong-viec/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"thue-cong-viec",
+						"hoan-thanh-cong-viec",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

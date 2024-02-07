@@ -2,9 +2,7 @@ import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete, Uploaded
 import { ConfigService } from '@nestjs/config';
 import { ApiTags, ApiBody, ApiConsumes } from '@nestjs/swagger';
 import { JobsService } from './jobs.service';
-import { JobTypeDto, TypePageDto } from '../job-type/dto/job-type.dto';
 import { JobDto, JodPageDto, UploadJobImgDto } from './dto/jobs.dto';
-import { UploadAvatarDto } from '../users/dto/user.dto';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 

@@ -2,7 +2,6 @@ import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete, Param } 
 import { ConfigService } from '@nestjs/config';
 import { HireService } from './hire.service';
 import { ApiTags } from '@nestjs/swagger';
-import { JobTypeDto, TypePageDto } from '../job-type/dto/job-type.dto';
 import { HireDto, HirePageDto } from './dto/hire.dto';
 
 @ApiTags("ThueCongViec")

@@ -3,7 +3,6 @@ import { ConfigService } from '@nestjs/config';
 import { ApiTags } from '@nestjs/swagger';
 import { DetailTypeService } from './detail-type.service';
 import { JobDetailDto, DetailPageDto } from './dto/detail-type.dto';
-import { TypePageDto, JobTypeDto } from '../job-type/dto/job-type.dto';
 
 @ApiTags("ChiTietLoaiCongViec")
 @Controller('chi-tiet-loai-cong-viec')

@@ -2,7 +2,6 @@ import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete, Param } 
 import { ConfigService } from '@nestjs/config';
 import { CmtService } from './cmt.service';
 import { ApiTags } from '@nestjs/swagger';
-import { JobTypeDto } from '../job-type/dto/job-type.dto';
 import { CmtDto } from './dto/cmt.dto';
 
 @ApiTags("BinhLuan")

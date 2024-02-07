@@ -1,14 +1,17 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class JobTypeDto {
+export class HireDto {
     @ApiProperty()
-    ma_loai_cong_viec: number;
+    ma_cong_viec?: number;
 
     @ApiProperty()
-    ten_loai_cong_viec: string;
+    user_id?: number;
+
+    @ApiProperty()
+    hoan_thanh?: boolean;
 }
 
-export class TypePageDto {
+export class HirePageDto {
     @ApiProperty({ required: false })
     pageIndex: number;
 

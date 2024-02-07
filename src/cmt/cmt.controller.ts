@@ -1,7 +1,9 @@
-import { Controller, Get, Headers, Res } from '@nestjs/common';
+import { Controller, Get, Headers, Res, Body, Post, Query, Put, Delete } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { CmtService } from './cmt.service';
 import { ApiTags } from '@nestjs/swagger';
+import { JobTypeDto } from '../job-type/dto/job-type.dto';
+import { CmtDto } from './dto/cmt.dto';
 
 @ApiTags("BinhLuan")
 @Controller('binh-luan')
@@ -19,4 +21,40 @@ export class CmtController {
         return this.cmtService.getCmt(token, res)
     }
 
+    @Post("/")
+    addCmt(
+        @Body() body: CmtDto,
+        @Headers("Token") token: string,
+        @Res() res: Response
+    ) {
+        return this.cmtService.addCmt(token, res, body)
+    }
+
+    @Put("/:id")
+    editCmt(
+        @Query("id") id: number,
+        @Headers("Token") token: string,
+        @Res() res: Response,
+        @Body() body: CmtDto
+    ) {
+        return this.cmtService.editCmt(token, res, id, body)
+    }
+
+    @Delete("/:id")
+    deleteCmt(
+        @Query("id") id: number,
+        @Headers("Token") token: string,
+        @Res() res: Response
+    ) {
+        return this.cmtService.deleteCmt(token, res, id)
+    }
+
+    @Get("/lay-binh-luan-theo-cong-viec/:MaCongViec")
+    getCmtByJob(
+        @Query("MaCongViec") MaCongViec: number,
+        @Headers("Token") token: string,
+        @Res() res: Response,
+    ) {
+        return this.cmtService.getCmtByJob(token, res, MaCongViec)
+    }
 }
